@@ -1,0 +1,24 @@
+package main
+
+import (
+    "fmt"
+    "strings"
+    "os"
+)
+
+
+func prefixes(s string) {
+        result := ""
+        a := (strings.Split(s, ""))
+        for i := 0; i < len(a); i++ {
+            fmt.Println(result)
+            result = result + a[i]
+        }
+        fmt.Println(result)
+}
+
+func main() {
+        args := os.Args
+        s := args[1]
+        prefixes(s)
+}
